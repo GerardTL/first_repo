@@ -24,7 +24,7 @@ This documentation, occupying the front portion of this README.md file, suppleme
 
 ## Features of MyReads App
 - on the main page, displays three book shelves (different areas of the screen): Currently Reading, Want to Read, and Read
-- for each shelf, displays any number of books
+- for each shelf, displays any number of books assigned to that shelf
 - displays each book with a thumbnail image of the book cover, title, author(s), and a select control with choices to move the book to another shelf, along with 'None' to remove the book entirely
 - on request, loads a search page which accepts a query from the user, then goes to a backend server to retrieve books found by that query
 - displays the retrieved books in a search results area; the user can move any retrieved book to a shelf using the select control
@@ -32,7 +32,7 @@ This documentation, occupying the front portion of this README.md file, suppleme
 - when restarting, restores the same shelves-books setup as before the restart
 
 ## React Components
-The original App.js provided in the template was revised, and five additional components were created: BooksOnShelf, BookOnShelf, Search, BooksFromQuery, and BookFromQuery.
+In the src directory, the original App.js provided in the template was revised, and five additional components were created: BooksOnShelf, BookOnShelf, Search, BooksFromQuery, and BookFromQuery.
 ```
 BooksApp (App.js)
 - BooksOnShelf (BooksOnShelf.js)
@@ -68,13 +68,13 @@ BooksApp (App.js)
 
 ## Backend Server
 
-The provided file [`BooksAPI.js`](src/BooksAPI.js) defines methods to communicate with the backend server.  Documentation from original README: [Backend Server](#backend-server).
+The provided file [`BooksAPI.js`](src/BooksAPI.js) defines methods to communicate with the backend server.  Documentation from original README: [Backend Server](#backend-server-1).
 
-### Responses to search(query)
+### Responses to a call to search(query)
 If a call to `search(query)` yields any results, it returns a large object; each key has a corresponding value which is an **object** containing information on one book.  If the query yields no results, the call returns a smaller object; each key has a corresponding value which is a **string**.
 
 The original, unchanged [README.md](#myreads-project) file begins below.
-
+***
 
 # MyReads Project
 
